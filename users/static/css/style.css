@@ -1,0 +1,16 @@
+body {
+  background-color: #808080;
+}
+
+label,
+input {
+  display: block;
+}
+
+span.helptext {
+  display: none;
+}
+
+.container-fluid {
+  height: 100vh;
+}
