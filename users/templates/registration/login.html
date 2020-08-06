@@ -60,7 +60,6 @@
 <hr>
 <div class="d-flex flex-column justify-content-center">
   <p class="card-text text-muted">Social logins</p>
-  <a class="btn btn-" href="{% url 'dashboard' %}"></i>Back to dashboard</a>
   <a class="btn btn-dark btn-block" href="{% url 'social:begin' 'github' %}"><i class="fab fa-github fa-fw"></i> Login
     with GitHub</a>
   <a class="btn btn-info btn-block" href="{% url 'social:begin' 'twitter' %}"><i class="fab fa-twitter fa-fw"></i>
@@ -69,9 +68,11 @@
        class="fab fa-facebook fa-fw"></i> Login with Facebook</a>
 </div>
 <hr>
-<div class="d-flex flex-column justify-content-center">
+<div class="d-flex flex-column justify-content-center mb-2">
   <a class="btn btn-success btn-block" href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a>
   <a class="btn btn-danger btn-block" href="{% url 'password_reset' %}"><i class="fas fa-key fa-fw"></i> Reset
     password</a>
 </div>
+
+<a class="card-link" href="{% url 'dashboard' %}"></i>Back to dashboard</a>
 {% endblock %}
