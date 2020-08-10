@@ -1,16 +1,81 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 
+{% block title %}<title>Login</title>{% endblock title %}
 {% block content %}
-<h2>Login</h2>
-
+<h5 class="card-title">Login</h5>
 <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Login">
-</form>
+  {% csrf_token %}
 
-<a href="{% url 'dashboard' %}">Back to dashboard</a>
-<a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
-<a href="{% url 'password_reset' %}">Reset password</a>
-<a href="{% url 'register' %}">Register</a>
+  {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+      <p class="text-danger">{{ error }}</p>
+    {% endfor %}
+  {% endif %}
+
+  <div class="form-group">
+    <label for="{{ form.username.id_for_label }}" class="text-muted">Username</label>
+    {% if form.is_bound %}
+      {% if form.errors %}
+        {% render_field form.username class="form-control is-invalid" %}
+        {% for error in form.username.errors %}
+          <div class="invalid-feedback">
+            {{ error }}
+          </div>
+        {% endfor %}
+      {% else %}
+        {% render_field form.username class="form-control is-valid" %}
+      {% endif %}
+    {% else %}
+      {% render_field form.username class="form-control" %}
+    {% endif %}
+    {% if form.username.help_text %}
+      <small class="form-text text-muted">{{ form.username.help_text }}</small>
+    {% endif %}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.password.id_for_label }}" class="text-muted">Password</label>
+    {% if form.is_bound %}
+      {% if form.errors %}
+        {% render_field form.password class="form-control is-invalid" %}
+        {% for error in form.password.errors %}
+          <div class="invalid-feedback">
+            {{ error }}
+          </div>
+        {% endfor %}
+      {% else %}
+        {% render_field form.password class="form-control is-valid" %}
+      {% endif %}
+    {% else %}
+      {% render_field form.password class="form-control" %}
+    {% endif %}
+
+    {% if form.password.help_text %}
+      <small class="form-text text-muted">{{ form.password.help_text }}</small>
+    {% endif %}
+  </div>
+  <button type="submit" class="btn btn-secondary btn-block">Login</button>
+</form>
+<hr>
+<div class="d-flex flex-column justify-content-center">
+  <p class="card-text text-muted">Social logins</p>
+  <a class="btn btn-dark btn-block" href="{% url 'social:begin' 'github' %}"><i class="fab fa-github fa-fw"></i> Login
+    with GitHub</a>
+  <a class="btn btn-info btn-block" href="{% url 'social:begin' 'twitter' %}"><i class="fab fa-twitter fa-fw"></i>
+    Login with Twitter</a>
+  <a class="btn btn-primary btn-block" href="{% url 'social:begin' 'facebook' %}"><i
+       class="fab fa-facebook fa-fw"></i> Login with Facebook</a>
+  <a class="btn btn-outline-secondary btn-block" href="{% url 'social:begin' 'google-oauth2' %}"><i
+       class="fab fa-google fa-fw"></i> Login with Google</a>
+</div>
+<hr>
+{% comment %} <div class="d-flex flex-column justify-content-center mb-2">
+  <a class="btn btn-success btn-block" href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a>
+  <a class="btn btn-danger btn-block" href="{% url 'password_reset' %}"><i class="fas fa-key fa-fw"></i> Reset
+    password</a>
+</div> {% endcomment %}
+
+<a class="card-link" href="{% url 'dashboard' %}"></i>Back to dashboard</a>
+<a class="card-link" href="{% url 'register' %}"> Register</a>
 {% endblock %}

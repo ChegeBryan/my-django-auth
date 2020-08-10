@@ -1,13 +1,28 @@
-<style>
-    label, input {
-        display: block;
-    }
-    span.helptext {
-        display: none;
-    }
-</style>
+{% load static %}
+<!DOCTYPE html>
+<html>
 
-<h1>Welcome to Awesome Website</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon"
+              href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text
+                        y=%22.9em%22 font-size=%2290%22>🔑</text></svg>">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/f88a500b59.js" crossorigin="anonymous"></script>
+        {% block title %}<title>My Django Auth</title>{% endblock title %}
+    </head>
 
-{% block content %}
-{% endblock %}
+    <body>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <div class="card" style="width: 25rem">
+              <div class="card-body">
+                {% block content %}
+                {% endblock %}
+              </div>
+            </div>
+        </div>
+    </body>
+
+</html>
