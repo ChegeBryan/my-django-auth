@@ -70,11 +70,12 @@
        class="fab fa-google fa-fw"></i> Login with Google</a>
 </div>
 <hr>
-<div class="d-flex flex-column justify-content-center mb-2">
+{% comment %} <div class="d-flex flex-column justify-content-center mb-2">
   <a class="btn btn-success btn-block" href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a>
   <a class="btn btn-danger btn-block" href="{% url 'password_reset' %}"><i class="fas fa-key fa-fw"></i> Reset
     password</a>
-</div>
+</div> {% endcomment %}
 
 <a class="card-link" href="{% url 'dashboard' %}"></i>Back to dashboard</a>
+<a class="card-link" href="{% url 'register' %}"> Register</a>
 {% endblock %}
