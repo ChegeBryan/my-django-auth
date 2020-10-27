@@ -10,7 +10,7 @@ autopep8==1.5.3
 certifi==2020.6.20
 cffi==1.14.1
 chardet==3.0.4
-cryptography==3.0
+cryptography==3.2
 defusedxml==0.7.0rc1
 Django==3.0.8
 idna==2.10
@@ -33,7 +33,7 @@ autopep8==1.5.3
 certifi==2020.6.20
 cffi==1.14.1
 chardet==3.0.4
-cryptography==3.0
+cryptography==3.2
 defusedxml==0.7.0rc1
 Django==3.0.8
 gunicorn==20.0.4
@@ -57,7 +57,7 @@ autopep8==1.5.3
 certifi==2020.6.20
 cffi==1.14.1
 chardet==3.0.4
-cryptography==3.0
+cryptography==3.2
 defusedxml==0.7.0rc1
 dj-database-url==0.5.0
 Django==3.0.8
@@ -83,7 +83,7 @@ autopep8==1.5.3
 certifi==2020.6.20
 cffi==1.14.1
 chardet==3.0.4
-cryptography==3.0
+cryptography==3.2
 defusedxml==0.7.0rc1
 dj-database-url==0.5.0
 Django==3.0.8
@@ -110,7 +110,7 @@ autopep8==1.5.3
 certifi==2020.6.20
 cffi==1.14.1
 chardet==3.0.4
-cryptography==3.0
+cryptography==3.2
 defusedxml==0.7.0rc1
 dj-database-url==0.5.0
 Django==3.0.8
