@@ -7,7 +7,7 @@ sqlparse==0.3.1
 toml==0.10.1
 asgiref==3.2.10
 autopep8==1.5.3
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.1
 chardet==3.0.4
 cryptography==3.0
@@ -30,7 +30,7 @@ toml==0.10.1
 urllib3==1.25.10
 asgiref==3.2.10
 autopep8==1.5.3
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.1
 chardet==3.0.4
 cryptography==3.0
@@ -54,7 +54,7 @@ toml==0.10.1
 urllib3==1.25.10
 asgiref==3.2.10
 autopep8==1.5.3
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.1
 chardet==3.0.4
 cryptography==3.0
@@ -80,7 +80,7 @@ toml==0.10.1
 urllib3==1.25.10
 asgiref==3.2.10
 autopep8==1.5.3
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.1
 chardet==3.0.4
 cryptography==3.0
@@ -107,7 +107,7 @@ urllib3==1.25.10
 whitenoise==5.1.0
 asgiref==3.2.10
 autopep8==1.5.3
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.1
 chardet==3.0.4
 cryptography==3.0
